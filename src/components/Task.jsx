@@ -24,30 +24,37 @@ function Task(props) {
   return (
     <>
       {/* space = margin */}
-      <ul className=" flex flex-wrap justify-between " style={{width:"1000px"}}>
+      <ul className=" flex flex-wrap justify-between " style={{ width: "1000px" }}>
         {props.tasks.map((task) => (
           // flex deixa os elementos um do lado do outro
-          <li key={task.id} className="flex mb-2 shadow-custom">
-            {/* Evento = Ação = Função */}
-            <div
-              // onClick Recebe uma função
-              onClick={() => props.onTaskClick(task.id)}
-              // text-left - align-itens    // rounded-md = border radius
-              className="bg-yellow-200 text-left w-60 text-slate-500 p-2">
-              {task.title}
-              <div className=" flex justify-end">
-                <button className=" p-2 rounded-md text-slate-500"
+          <li key={task.id} className="flex mb-2 shadow-custom bg-yellow-200
+          ">
+            <div className="flex min-h-24 w-60">
+              {/* Evento = Ação = Função */}
+              <div
+                // onClick Recebe uma função
+                onClick={() => props.onTaskClick(task.id)}
+                // text-left - align-itens    // rounded-md = border radius
+                className="text-left w-60 text-slate-500 p-4">
+                {task.title}
+
+
+
+              </div>
+              <div className=" flex justify-end ">
+                <button className="p-2 rounded-md text-slate-500"
                   onClick={() => onSeeDetailsClick(task)}
                 >
                   {/* Component lucide */}
                   <Target />
                 </button>
                 {/* </Link> */}
-                <button onClick={() => props.onDeleteTaskClick(task.id)} className=" p-2 rounded-md text-slate-500"><Trash /></button>
+              </div>
+              <div className="flex justify-end">
+                {/* <Link href="/TaskPage"> */}
+                <button onClick={() => props.onDeleteTaskClick(task.id)} className=" p-2 rounded-md text-slate-500 "><Trash /></button>
               </div>
             </div>
-            {/* <Link href="/TaskPage"> */}
-
           </li>
         ))}
       </ul>

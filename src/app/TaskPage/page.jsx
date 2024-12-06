@@ -39,27 +39,30 @@ function TaskDetails() {
 
 
     return (
-        <div className="h-screen w-screen p-6 relative">
-            <div className="absolute inset-0 opacity-30">
+        <div className="bg-slate-200 h-screen w-screen p-6 relative">
+            <div className="inset-0 opacity-30">
             </div>
             {/* mx-auto - Centraliza a div no eixo x */}
-            <div className="w-[500px] mx-auto space-y-4 relative z-10">
+            <div className="w-[500px] mx-auto space-y-4 relative z-10" >
                 <div className="flex justify-center relative mb-5">
                     <button className="absolute left-0 top-0 bottom-0 text-slate-100"
                         // onClick={()=> router.back()}    // Volta para tras
                         onClick={onBackClick}
                     >
-                        <ChevronLeftIcon />
+                        <ChevronLeftIcon className="text-slate-500"/>
                     </button>
                     <h1 className="Créditos text-2xl text-slate-500">Detalhes da Nota</h1>
                 </div>
 
-                <div className="bg-yellow-200  p-4 relative z-10 shadow-custom">
-                    <h2 className="text-xl font-bold text-slate-500">Titulo: {title}</h2>
-                    <p className="text-slate-500 text-xl">Descrição: {description}</p>
+                <div className="bg-yellow-200 flex-col flex-wrap  min-h-96 p-4 z-10 shadow-custom">
+                    
+                    <h2 className="flex flex-wrap text-xl font-bold  text-slate-500">Titulo: {title}</h2>
+                    <p className="flex flex-wrap text-slate-500 font-bold w-40 text-xl ">Descrição: {description}</p>
                 </div>
             </div>
+            
         </div>
+        
     );
 }
 

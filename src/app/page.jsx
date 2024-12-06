@@ -68,7 +68,7 @@ function Home() {
     
     <>
       
-      <div className="w-screen h-screen flex justify-center items-center p-6 relative">
+      <div className="w-screen h-screen flex justify-center items-center p-6 relative bg-slate-200">
         
         <div className="absolute inset-0 opacity-30">
           

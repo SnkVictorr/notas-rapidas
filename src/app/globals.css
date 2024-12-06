@@ -32,3 +32,31 @@ body {
 .shadow-custom{
   box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
 }
+
+
+/* ScrollBar */
+
+/* Para Firefox */
+.textarea {
+  scrollbar-width: thin; /* Barra de rolagem fina */
+  scrollbar-color: #4A5568 #EDF2F7; /* Cor do polegar e do fundo */
+}
+
+
+/* Este seletor é específico para navegadores baseados no motor WebKit, como Chrome e Safari */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Este seletor estiliza o "polegar" da barra de rolagem, que é a parte que o usuário arrasta. */
+::-webkit-scrollbar-thumb {
+  background-color: rgb(100 116 139); /* Cor do polegar */
+  border-radius: 10px; /* Bordas arredondadas */
+}
+
+/*  Este seletor estiliza a área de fundo da barra de rolagem, conhecida como "track" (pista). */
+::-webkit-scrollbar-track {
+  background-color: #f0f0d8a1; /* Cor do fundo */
+}
+
+

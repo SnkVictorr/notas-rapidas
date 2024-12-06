@@ -3,7 +3,6 @@ import Input from "@/components/Input"
 
 
 
-
 function AddTask(props) {
 
 
@@ -32,7 +31,7 @@ function AddTask(props) {
             <div className="bg-yellow-200 shadow-custom flex flex-col top-4 bottom-11 size items-start ps-[15px]">
 
                 <div className="flex mt-10 ">
-                    <h4 className="text-slate-500 font-bold ">Titulo</h4>
+                    <h4 className="text-slate-500 font-bold">Titulo:</h4>
                     <Input placeholder="Digite o titulo"
                         // ref={textareaRef}
                         value={title}
@@ -41,21 +40,23 @@ function AddTask(props) {
                             adjustHeight(); // Ajusta a altura do textarea
                         }}
                         style={{ minHeight: "10px", maxHeight: "200px" }}
+                        
                     />
                 </div>
                 <div className="flex  ">
-                    <h4 className="text-slate-500 font-bold me-4 py-2">Descrição</h4>
+                    <h4 className="text-slate-500 font-bold me-4 my-3">Descrição:</h4>
                     <textarea
+                    
                         ref={textareaRef}
                         type="text"
-                        className="outline-none  py-2 rounded-md placeholder-slate-500 w-full resize-none text-slate-500  overflow-hidden bg-transparent"
+                        className="outline-none  my-3 rounded-md placeholder-slate-500 placeholder-opacity-70 w-full resize-none text-slate-500   bg-transparent overflow-auto"
                         placeholder="Digite a descrição"
                         value={description}
                         onChange={(event) => {
                             adjustHeight();
                             setDescription(event.target.value)
                         }}
-                        style={{ minHeight: "10px", maxHeight: "350px", width: "380px" }}
+                        style={{ minHeight: "10px", maxHeight: "320px", width: "380px" }}
 
                     />
                 </div>
